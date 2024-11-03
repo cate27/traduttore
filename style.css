@@ -1,0 +1,188 @@
+/* 
+  bg-color: rgb(234 237 240)
+  text-color: black
+  blue: rgb(76 100 242)
+  light-blue: rgb(128 176 255)
+*/
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  height: 70px;
+}
+
+body {
+  padding: 16px;
+  font-family: "Inter", sans-serif;
+  background-color: rgb(226 182 140);
+}
+
+h1 {
+	font-size: 20px;
+	color: white;
+  text-transform: uppercase;
+}
+
+input {
+  padding: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+.favorites {
+  position: relative;
+  left: 25rem;
+  top: 5.6rem;
+  background-color: unset;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .favorites {
+    position: relative;
+    left: 18rem;
+  }
+}
+
+.lang-button, .reset-button, .random-button {
+  padding: 8px 16px;
+  background-color: rgb(128 176 255);
+  font-size: 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+i.fa-solid.fa-dice {
+  color: red;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.container {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.panel {
+  background-color: rgb(76 100 242);
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.translation {  
+  background-color: white;
+  margin-bottom: 16px;
+}
+
+.en-bg {
+  background-image: url(images/bandiera_americana.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.fr-bg {
+  background-image: url(images/bandiera_francese.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.es-bg {
+  background-image: url(images/bandiera_spagnola.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.translate {
+  position: relative;
+  top: 1.2rem;
+}
+
+.translation-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+
+.translation-text {
+  font-size: 32px;
+}
+
+.translation-flag {
+  position: absolute;
+  font-size: 32px;
+}
+
+
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.text-input {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.translate-favorites {
+  position: relative;
+  top: 1rem;
+}
+
+.remove-translate {
+  padding-top: inherit;
+  margin-top: 1rem;
+  display: block;
+  position: relative;
+}
+
+p.text {
+  color: white;
+  font-family: serif;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+button#remove-selected-button {
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 2px solid #f74c4c;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+button#remove-selected-button:hover {
+  filter: drop-shadow(2px 2px 20px rgb(226 182 140));
+}
+
+.selected {
+  background-color: #f7d7d7;
+}
