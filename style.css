@@ -53,7 +53,50 @@ input {
   }
 }
 
-.lang-button, .reset-button, .random-button {
+select#language-select {
+  width: 60%;
+  height: 50px;
+  border-radius: 1rem;
+}
+
+.lang-button {
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-family: math;
+}
+
+#language-select option:nth-child(even) {
+  background-color: #e8e8e8;
+}
+
+#language-select option:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Larghezza della scrollbar */
+#language-select::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Colore dello sfondo della scrollbar */
+#language-select::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Colore del cursore (pollice) */
+#language-select::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px; /* Per angoli arrotondati */
+}
+
+/* Colore del cursore al passaggio del mouse */
+#language-select::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+.reset-button, .random-button {
   padding: 8px 16px;
   background-color: rgb(128 176 255);
   font-size: 28px;
@@ -91,11 +134,46 @@ header {
   margin-bottom: 16px;
 }
 
-.en-bg {
-  background-image: url(images/bandiera_americana.jpg);
+.ar-bg {
+  background-image: url(images/bandiera_araba.jpg);
   background-position: center;
   background-size: cover;
-  position: relative;
+}
+
+.bg-bg {
+  background-image: url(images/bandiera_bulgara.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.cs-bg {
+  background-image: url(images/bandiera_ceca.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.zh-bg {
+  background-image: url(images/bandiera_cinese.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hr-bg {
+  background-image: url(images/bandiera_croata.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.da-bg {
+  background-image: url(images/bandiera_danese.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.et-bg {
+  background-image: url(images/bandiera_estone.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .fr-bg {
@@ -104,8 +182,123 @@ header {
   background-size: cover;
 }
 
+.fi-bg {
+  background-image: url(images/bandiera_finlandese.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.ja-bg {
+  background-image: url(images/bandiera_giapponese.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.el-bg {
+  background-image: url(images/bandiera_greca.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.en-bg {
+  background-image: url(images/bandiera_americana.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.ga-bg {
+  background-image: url(images/bandiera_irlandese.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.lt-bg {
+  background-image: url(images/bandiera_lituana.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.mt-bg {
+  background-image: url(images/bandiera_maltese.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.no-bg {
+  background-image: url(images/bandiera_norvegese.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.nl-bg {
+  background-image: url(images/bandiera_olandese.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.pl-bg {
+  background-image: url(images/bandiera_polacca.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.pt-bg {
+  background-image: url(images/bandiera_portoghese.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.ro-bg {
+  background-image: url(images/bandiera_rumena.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.ru-bg {
+  background-image: url(images/bandiera_russa.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.sk-bg {
+  background-image: url(images/bandiera_slovacca.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.sl-bg {
+  background-image: url(images/bandiera_slovena.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
 .es-bg {
   background-image: url(images/bandiera_spagnola.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.sv-bg {
+  background-image: url(images/bandiera_svedese.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.de-bg {
+  background-image: url(images/bandiera_tedesca.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.tr-bg {
+  background-image: url(images/bandiera_turca.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hu-bg {
+  background-image: url(images/bandiera_ungherese.jpg);
   background-position: center;
   background-size: cover;
 }

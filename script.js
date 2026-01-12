@@ -1,4 +1,4 @@
-const langButtons = document.querySelectorAll('.lang-button');
+const languageSelect = document.getElementById('language-select');
 const textInput = document.querySelector('.text-input');
 const translationText = document.querySelector('.translation-text');
 const translationFlag = document.querySelector('.translation-flag');
@@ -72,7 +72,7 @@ window.addEventListener('load', function() {
 function changeBackground(lang) {
   const translation = document.querySelector('.translation');
   //rimuovo le classi relative alle bandiere
-  translation.classList.remove("en-bg", "fr-bg", "es-bg");
+  translation.classList.remove("ar-bg", "bg-bg", "cs-bg", "hr-bg", "da-bg", "et-bg", "fr-bg", "fi-bg", "ja-bg", "el-bg", "en-bg", "ga-bg", "lt-bg", "mt-bg", "no-bg", "nl-bg", "pl-bg", "pt-bg", "ro-bg", "ru-bg", "sk-bg", "sl-bg", "es-bg", "sv-bg", "de-bg", "tr-bg", "hu-bg");
   //aggiungo le classi relative alle bandiere
   translation.classList.add(lang + "-bg");
 }
@@ -107,8 +107,8 @@ async function translate(text, lang, flag) {
   restoreBackground();
 }
 
-langButtons.forEach(function(langButton) {
-  langButton.addEventListener('click', function() {
+languageSelect.addEventListener('change', function() {
+  const selectedOption = languageSelect.options[languageSelect.selectedIndex];
 
     // recupero il testo dal campo di input e rimuovo eventuali spazi extra
     // all'inizio e alla fine della stringa inserita con il metodo .trim()
@@ -116,9 +116,9 @@ langButtons.forEach(function(langButton) {
     const text = textInput.value.trim();
 
     // recupero il codice lingua dal data-attribute del pulsante
-    const lang = langButton.dataset.lang;
+    const lang = selectedOption.dataset.lang;
     // recupero la bandierina dalla testo del pulsante
-    const flag = langButton.innerText;
+    const flag = selectedOption.innerText;
 
     //recupero lo sfondo
     const backgroundLang = this.getAttribute("data-lange");
@@ -129,8 +129,8 @@ langButtons.forEach(function(langButton) {
     if(text.length > 0) {
       translate(text, lang, flag);
     }
-  });
 });
+
 
 //funzione per inserire frasi random
 async function randomString() {

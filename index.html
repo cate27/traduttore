@@ -34,9 +34,38 @@
       <section class="panel controls">
         <input class="text-input" type="text" placeholder="inserisci il testo da tradurre">
         
-        <button class="lang-button" data-lang="en">🇬🇧</button>
-        <button class="lang-button" data-lang="fr">🇫🇷</button>
-        <button class="lang-button" data-lang="es">🇪🇸</button>
+        <!-- Select per la scelta della lingua -->
+        <select name="lang" id="language-select">
+          <option value="change-lang" class="lang-button" selected disabled>Seleziona lingua</option>
+          <option class="lang-button" data-lang="ar" value="ar">Arabo</option>
+          <option class="lang-button" data-lang="bg" value="bg">Bulgaro</option>
+          <option class="lang-button" data-lang="cs" value="cs">Ceco</option>
+          <option class="lang-button" data-lang="zh" value="zh">Cinese</option>
+          <option class="lang-button" data-lang="hr" value="hr">Croato</option>
+          <option class="lang-button" data-lang="da" value="da">Danese</option>
+          <option class="lang-button" data-lang="et" value="et">Estonia</option>
+          <option class="lang-button" data-lang="fr" value="fr">Francese</option>
+          <option class="lang-button" data-lang="fi" value="fi">Finlandese</option>
+          <option class="lang-button" data-lang="ja" value="ja">Giapponese</option>
+          <option class="lang-button" data-lang="el" value="el">Greco</option>
+          <option class="lang-button" data-lang="en" value="en">Inglese</option>
+          <option class="lang-button" data-lang="ga" value="ga">Irlandese</option>
+          <option class="lang-button" data-lang="lt" value="lt">Lituano</option>
+          <option class="lang-button" data-lang="mt" value="mt">Maltese</option>
+          <option class="lang-button" data-lang="no" value="no">Norvegese</option>
+          <option class="lang-button" data-lang="nl" value="nl">Olandese</option>
+          <option class="lang-button" data-lang="pl" value="pl">Polacco</option>
+          <option class="lang-button" data-lang="pt" value="pt">Portoghese</option>
+          <option class="lang-button" data-lang="ro" value="ro">Rumeno</option>
+          <option class="lang-button" data-lang="ru" value="ru">Russo</option>
+          <option class="lang-button" data-lang="sk" value="sk">Slovacco</option>
+          <option class="lang-button" data-lang="sl" value="sl">Sloveno</option>
+          <option class="lang-button" data-lang="es" value="es">Spagnolo</option>
+          <option class="lang-button" data-lang="sv" value="sv">Svedese</option>
+          <option class="lang-button" data-lang="de" value="de">Tedesco</option>
+          <option class="lang-button" data-lang="tr" value="tr">Turco</option>
+          <option class="lang-button" data-lang="hu" value="hu">Ungherese</option>
+        </select>
         <button class="reset-button">❌</button>
         <button class="random-button">
           <i class="fa-solid fa-dice icon-dice"></i>
