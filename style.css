@@ -1,10 +1,3 @@
-/* 
-  bg-color: rgb(234 237 240)
-  text-color: black
-  blue: rgb(76 100 242)
-  light-blue: rgb(128 176 255)
-*/
-
 /* CSS Reset */
 * {
   margin: 0;
@@ -19,7 +12,7 @@ img {
 body {
   padding: 16px;
   font-family: "Inter", sans-serif;
-  background-color: rgb(226 182 140);
+  background-color: #f4f6fb;
 }
 
 h1 {
@@ -28,41 +21,74 @@ h1 {
   text-transform: uppercase;
 }
 
-input {
+p.subtitle {
+  position: absolute;
+  top: 5rem;
+  color: white;
+  font-family: cursive;
+}
+
+textarea {
+  min-height: 6em;
+}
+
+.text-input {
   padding: 16px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   border-radius: 8px;
   border: none;
+  display: block;
+  resize: vertical;
+  outline: 0px;
 }
 
 .favorites {
-  position: relative;
-  left: 25rem;
-  top: 5.6rem;
+  position: absolute;
   background-color: unset;
   border: none;
   font-size: 2rem;
   cursor: pointer;
+  top: 8px;
+  right: 8px;
+  transition: transform 0.2s ease, color 0.2s ease, filter 0.2s ease;
+  color: #ffd700;
 }
 
-@media screen and (max-width: 767px) {
-  .favorites {
-    position: relative;
-    left: 18rem;
+.favorites:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.8));
+}
+
+@media (max-width: 600px) {
+  .translation {
+    flex-direction: column;
+  }
+
+  .translation-box {
+    width: 100%;
   }
 }
 
+
 select#language-select {
-  width: 60%;
   height: 50px;
   border-radius: 1rem;
+  width: calc(100% / 2 - 30px);
+}
+
+i.fa-solid.fa-arrow-right-arrow-left {
+  position: relative;
+  align-content: center;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 
 .lang-button {
-    padding: 2rem;
-    font-size: 1.5rem;
-    font-family: math;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-family: math;
 }
 
 #language-select option:nth-child(even) {
@@ -94,8 +120,6 @@ select#language-select {
     background: #555;
 }
 
-
-
 .reset-button, .random-button {
   padding: 8px 16px;
   background-color: rgb(128 176 255);
@@ -103,12 +127,22 @@ select#language-select {
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+button.reset-button:hover, button.random-button:hover {
+  transform: scale(1.1);
 }
 
 i.fa-solid.fa-dice {
-  color: red;
+  color: white;
   position: relative;
   font-size: 1.5rem;
+  transition: color ease 0.2s;
+}
+
+i.fa-solid.fa-dice:hover {
+  color: #ffd700;
 }
 
 header {
@@ -130,177 +164,25 @@ header {
 }
 
 .translation {  
-  background-color: white;
   margin-bottom: 16px;
-}
-
-.ar-bg {
-  background-image: url(images/bandiera_araba.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.bg-bg {
-  background-image: url(images/bandiera_bulgara.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.cs-bg {
-  background-image: url(images/bandiera_ceca.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.zh-bg {
-  background-image: url(images/bandiera_cinese.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.hr-bg {
-  background-image: url(images/bandiera_croata.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.da-bg {
-  background-image: url(images/bandiera_danese.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.et-bg {
-  background-image: url(images/bandiera_estone.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.fr-bg {
-  background-image: url(images/bandiera_francese.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.fi-bg {
-  background-image: url(images/bandiera_finlandese.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.ja-bg {
-  background-image: url(images/bandiera_giapponese.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.el-bg {
-  background-image: url(images/bandiera_greca.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.en-bg {
-  background-image: url(images/bandiera_americana.jpg);
-  background-position: center;
-  background-size: cover;
+  height: 210px;
+  display: flex;
+  gap: 16px;
   position: relative;
+  width: 100%;
 }
 
-.ga-bg {
-  background-image: url(images/bandiera_irlandese.jpg);
-  background-position: center;
-  background-size: cover;
+.translation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.7);
 }
 
-.lt-bg {
-  background-image: url(images/bandiera_lituana.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.mt-bg {
-  background-image: url(images/bandiera_maltese.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.no-bg {
-  background-image: url(images/bandiera_norvegese.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.nl-bg {
-  background-image: url(images/bandiera_olandese.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.pl-bg {
-  background-image: url(images/bandiera_polacca.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.pt-bg {
-  background-image: url(images/bandiera_portoghese.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.ro-bg {
-  background-image: url(images/bandiera_rumena.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.ru-bg {
-  background-image: url(images/bandiera_russa.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.sk-bg {
-  background-image: url(images/bandiera_slovacca.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.sl-bg {
-  background-image: url(images/bandiera_slovena.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.es-bg {
-  background-image: url(images/bandiera_spagnola.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.sv-bg {
-  background-image: url(images/bandiera_svedese.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.de-bg {
-  background-image: url(images/bandiera_tedesca.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.tr-bg {
-  background-image: url(images/bandiera_turca.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.hu-bg {
-  background-image: url(images/bandiera_ungherese.jpg);
-  background-position: center;
-  background-size: cover;
+.translation-box {
+  position: relative;
+  width: 100%;
+  text-align: center;
 }
 
 .translate {
@@ -308,33 +190,34 @@ header {
   top: 1.2rem;
 }
 
-.translation-result {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 150px;
-}
-
-.translation-text {
+.translation-text,
+.translations-text {
   font-size: 32px;
+  margin-bottom: 8px;
+  font-family: emoji;
+  min-height: 40px;
 }
 
 .translation-flag {
-  position: absolute;
-  font-size: 32px;
+  background-size: cover;
+  opacity: 0.15;
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  opacity: 0.8;
 }
 
-
+.textIn {
+  width: 50%;
+}
 
 .controls {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
-}
-
-.text-input {
-  width: 100%;
 }
 
 li {
@@ -344,6 +227,7 @@ li {
 .translate-favorites {
   position: relative;
   top: 1rem;
+  cursor: pointer;
 }
 
 .remove-translate {
@@ -378,4 +262,21 @@ button#remove-selected-button:hover {
 
 .selected {
   background-color: #f7d7d7;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  top: 1.5rem;
+}
+
+p.footer-text {
+  font-size: 1.1rem;
+  font-family: cursive;
+  letter-spacing: 1px;
+  font-weight: bold;
 }

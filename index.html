@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,62 +12,46 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
   <link rel="stylesheet" href="style.css">
   
-  <title>Traduttore</title>
+  <title>LinguaFlow - Traduttore online</title>
 </head>
 <body>
 
   <div class="container">
     <header class="panel">
-      <h1>Traduttore</h1>
-      <img src="images/logo.png" alt="">
+      <h1>LinguaFlow</h1>
+      <p class="subtitle">Traduttore di lingue</p>
+      <img src="images/logo.png" alt="Logo Traduttore">
     </header>
 
     <main>
       <section class="panel translation">
-        <div class="translation-flag"></div>
-        <button class="favorites">⭐</button>
-        <div class="translation-result">
-          <p class="translation-text">Traduzione</p>
+        <div class="translation-box">
+          <div class="translation-flag flag-from"></div>
+          <button class="favorites favorites-from">⭐</button>
+          <p class="translation-text text-from">Traduzione</p>
+        </div>
+        <div class="translation-box">
+          <div class="translation-flag flag-to"></div>
+          <button class="favorites favorites-to">⭐</button>
+          <p class="translations-text text-to">Traduzione</p>
         </div>
       </section>
 
       <section class="panel controls">
-        <input class="text-input" type="text" placeholder="inserisci il testo da tradurre">
+        <textarea class="text-input from-text" placeholder="Inserisci il testo da tradurre" aria-label="Testo di partenza" style="height: 60px;"></textarea>
+        <textarea class="text-input to-text" placeholder="Traduzione" aria-label="Testo di arrivo" style="height: 60px;" readonly></textarea>
         
         <!-- Select per la scelta della lingua -->
-        <select name="lang" id="language-select">
+        <select name="lang" id="languageFrom" class="selectedFrom">
           <option value="change-lang" class="lang-button" selected disabled>Seleziona lingua</option>
-          <option class="lang-button" data-lang="ar" value="ar">Arabo</option>
-          <option class="lang-button" data-lang="bg" value="bg">Bulgaro</option>
-          <option class="lang-button" data-lang="cs" value="cs">Ceco</option>
-          <option class="lang-button" data-lang="zh" value="zh">Cinese</option>
-          <option class="lang-button" data-lang="hr" value="hr">Croato</option>
-          <option class="lang-button" data-lang="da" value="da">Danese</option>
-          <option class="lang-button" data-lang="et" value="et">Estonia</option>
-          <option class="lang-button" data-lang="fr" value="fr">Francese</option>
-          <option class="lang-button" data-lang="fi" value="fi">Finlandese</option>
-          <option class="lang-button" data-lang="ja" value="ja">Giapponese</option>
-          <option class="lang-button" data-lang="el" value="el">Greco</option>
-          <option class="lang-button" data-lang="en" value="en">Inglese</option>
-          <option class="lang-button" data-lang="ga" value="ga">Irlandese</option>
-          <option class="lang-button" data-lang="lt" value="lt">Lituano</option>
-          <option class="lang-button" data-lang="mt" value="mt">Maltese</option>
-          <option class="lang-button" data-lang="no" value="no">Norvegese</option>
-          <option class="lang-button" data-lang="nl" value="nl">Olandese</option>
-          <option class="lang-button" data-lang="pl" value="pl">Polacco</option>
-          <option class="lang-button" data-lang="pt" value="pt">Portoghese</option>
-          <option class="lang-button" data-lang="ro" value="ro">Rumeno</option>
-          <option class="lang-button" data-lang="ru" value="ru">Russo</option>
-          <option class="lang-button" data-lang="sk" value="sk">Slovacco</option>
-          <option class="lang-button" data-lang="sl" value="sl">Sloveno</option>
-          <option class="lang-button" data-lang="es" value="es">Spagnolo</option>
-          <option class="lang-button" data-lang="sv" value="sv">Svedese</option>
-          <option class="lang-button" data-lang="de" value="de">Tedesco</option>
-          <option class="lang-button" data-lang="tr" value="tr">Turco</option>
-          <option class="lang-button" data-lang="hu" value="hu">Ungherese</option>
+        </select>
+        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+        <!-- Select per la lingua di destinazione -->
+        <select name="lang" id="languageTo" class="selectedTo">
+          <option value="change-lang" class="lang-button" selected disabled>Seleziona lingua</option>
         </select>
         <button class="reset-button">❌</button>
-        <button class="random-button">
+        <button title="Parola Causale" class="random-button" aria-label="Parola Causale">
           <i class="fa-solid fa-dice icon-dice"></i>
         </button>
       </section>
@@ -90,6 +74,13 @@
     </main>
   </div>
 
-    <script src="script.js"></script>
+  <footer>
+    <p class="footer-text">LinguaFlow · by Caterina</p>
+  </footer>
+
+  <script src="languages.js" defer></script>
+  <script src="randomWords.js" defer></script>
+  <script src="script.js" defer></script>
+
 </body>
 </html>
